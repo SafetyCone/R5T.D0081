@@ -1,15 +1,16 @@
 ﻿using System;
-
-using R5T.Dacia;
+using System.Threading.Tasks;
 
 using R5T.Magyar;
+
+using R5T.T0064;
 
 
 namespace R5T.D0081
 {
     [ServiceDefinitionMarker]
-    public interface IExecutionSynchronicityProvider
+    public interface IExecutionSynchronicityProvider : IServiceDefinition
     {
-        Synchronicity GetSynchronicity();
+        Task<Synchronicity> GetExecutionSynchronicity();
     }
 }

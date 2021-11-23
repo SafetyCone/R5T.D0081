@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 using R5T.Magyar;
+
+using R5T.T0064;
 
 
 namespace R5T.D0081.I001
 {
-    public class HardCodedAsynchronousExecutionSynchronicityProvider : IExecutionSynchronicityProvider
+    [ServiceImplementationMarker]
+    public class HardCodedAsynchronousExecutionSynchronicityProvider : IExecutionSynchronicityProvider, IServiceImplementation
     {
-        public Synchronicity GetSynchronicity()
+        public Task<Synchronicity> GetExecutionSynchronicity()
         {
-            return Synchronicity.Asynchronous;
+            return Task.FromResult(Synchronicity.Asynchronous);
         }
     }
 }

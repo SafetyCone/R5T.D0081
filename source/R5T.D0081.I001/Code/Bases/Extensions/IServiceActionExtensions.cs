@@ -11,7 +11,7 @@ namespace R5T.D0081.I001
     public static class IServiceActionExtensions
     {
         /// <summary>
-        /// Adds the <see cref="ConstructorBasedExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="ConstructorBasedExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IExecutionSynchronicityProvider> AddConstructorBasedExecutionSynchronicityProviderAction(this IServiceAction _,
             Synchronicity synchronicity)
@@ -23,7 +23,7 @@ namespace R5T.D0081.I001
         }
 
         /// <summary>
-        /// Adds the <see cref="HardCodedSynchronousExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="HardCodedSynchronousExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IExecutionSynchronicityProvider> AddHardCodedSynchronousExecutionSynchronicityProviderAction(this IServiceAction _)
         {
@@ -32,7 +32,7 @@ namespace R5T.D0081.I001
         }
 
         /// <summary>
-        /// Adds the <see cref="HardCodedAsynchronousExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="HardCodedAsynchronousExecutionSynchronicityProvider"/> implementation of <see cref="IExecutionSynchronicityProvider"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IExecutionSynchronicityProvider> AddHardCodedAsynchronousExecutionSynchronicityProviderAction(this IServiceAction _)
         {
